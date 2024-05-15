@@ -3,14 +3,13 @@ package com.test.view;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.test.entity.Person;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.data.renderer.TemplateRenderer;
 import com.vaadin.flow.router.Route;
 
-@Route("GridView")
+@Route("gridview")
 @CssImport("./styles/gridView.css")
 @CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
 public class GridView extends VerticalLayout {
@@ -30,6 +29,39 @@ public class GridView extends VerticalLayout {
 		grid.setItems(personList);
 
 		add(grid);
+	}
+
+	public static class Person {
+
+		private String firstName;
+
+		private String lastName;
+
+		public Person(String firstName, String lastName) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+		}
+
+		public String getFirstName() {
+			return firstName;
+		}
+
+		public void setFirstName(String firstName) {
+			this.firstName = firstName;
+		}
+
+		public String getLastName() {
+			return lastName;
+		}
+
+		public void setLastName(String lastName) {
+			this.lastName = lastName;
+		}
+
+		public String getFullName() {
+			return firstName + " " + lastName;
+		}
+
 	}
 
 }

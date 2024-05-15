@@ -21,7 +21,7 @@ import com.vaadin.flow.router.Route;
  * @author liu.xue.xun.101236
  *
  */
-@Route("file-treegrid")
+@Route("view/treegrid/demo01/file-treegrid")
 public class FileTreeGrid extends VerticalLayout {
 
 	/*
